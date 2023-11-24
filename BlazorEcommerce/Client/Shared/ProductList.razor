@@ -1,0 +1,51 @@
+﻿<ul class="list-unstyled">
+    @foreach (var product in Products)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img" src="@product.ImageUrl" alt="produtc.Title">
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0">@product.Title</h4>
+                </a>
+                <p>@product.Description</p>
+                <h5 class="price">
+                    $@product.Price
+                </h5>
+            </div>
+        </li>
+    }
+</ul>
+
+@code {
+    private static List<Product> Products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Title = "Cosmos",
+            Description  = "Escrito por um dos maiores divulgadores de ciência do século XX, Cosmos retraça 14 bilhões de anos de evolução cósmica, explorando tópicos como a origem da vida, o cérebro humano, hieróglifos egípcios, missões espaciais, a morte do sol, a evolução das galáxias e as forças e indivíduos que ajudaram a moldar a ciência moderna. Numa prosa transparente, Carl Sagan revela os segredos do planeta azul habitado por uma forma de vida que apenas começa a descobrir sua própria identidade e a se aventurar no vasto oceano do espaço sideral. Aqui, o tratamento dos temas científicos está sempre imbricado com outros campos de estudo tradicionais, como história, antropologia, arte e filosofia. Publicado pela primeira vez em 1980, Cosmos reúne alguns dos conhecimentos mais avançados da época sobre a natureza, a vida e o Universo ― e se mantém até hoje como uma das mais importantes obras de divulgação científica da história. Embora diversas descobertas fascinantes tenham ocorrido nos últimos quarenta anos, o tema central deste livro nunca estará desatualizado: nosso fascínio pelo conhecimento e a prática da ciência como atividade cultural.",
+            ImageUrl = "https://m.media-amazon.com/images/I/71zVhbnKmfL._SL1500_.jpg",
+            Price = 9.99m
+        },
+           new Product
+        {
+            Id = 2,
+            Title = "O mundo assombrado pelos demônios",
+            Description  = "Assombrado com as explicações pseudocientíficas e místicas que ocupam cada vez mais os espaços dos meios de comunicação, Carl Sagan reafirma o poder positivo e benéfico da ciência e da tecnologia para iluminar os dias de hoje e recuperar os valores da racionalidade. Como todos os livros do autor, O mundo assombrado pelos demônios está cheio de informações surpreendentes, transmitidas com humor e graça. Seus ataques muitas vezes divertidos à falsa ciência, às concepções excêntricas e aos irracionalismos do momento são acompanhados por lembranças da infância, quando seus pais o colocaram em contato pela primeira vez com os dois modelos de pensamento fundamentais para o método científico: o ceticismo e a admiração.",
+            ImageUrl = "https://m.media-amazon.com/images/I/9165ewWUEPL._SL1500_.jpg",
+            Price = 10.00m
+        },
+           new Product
+        {
+            Id = 3,
+            Title = "A revolução dos bichos: Um conto de fadas",
+            Description  = "Verdadeiro clássico moderno, concebido por um dos mais influentes escritores do século XX, A revolução dos bichos é uma fábula sobre o poder. Narra a insurreição dos animais de uma granja contra seus donos. Progressivamente, porém, a revolução degenera numa tirania ainda mais opressiva que a dos humanos.",
+            ImageUrl = "https://m.media-amazon.com/images/I/91BsZhxCRjL._SL1500_.jpg",
+            Price = 11.99m
+        },
+    };
+}
